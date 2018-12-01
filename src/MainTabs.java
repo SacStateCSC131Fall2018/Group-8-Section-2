@@ -2,6 +2,8 @@ import javax.swing.JPanel;
 import javax.swing.JTabbedPane;
 import javax.swing.JTextArea;
 
+//Test
+
 public class MainTabs extends JTabbedPane{
 	public MainTabs() {
 		JTextArea panelFiller = new JTextArea(200, 200);

@@ -12,7 +12,6 @@ public class PirexWindow extends JFrame {
     {
         super();
         setupLayout();
-        setupMenu();
         setSize(400,400);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         pack();

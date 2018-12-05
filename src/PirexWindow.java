@@ -56,7 +56,7 @@ public class PirexWindow extends JFrame {
         menuItem = new JMenuItem("Option");
         menuOption.add(menuItem);
         
-        //Shows Documents (Doesn't actually show you the Documents)
+        //Shows Documents
         menuItem = new JMenuItem("Documents");
         menuOption.add(menuItem);
         

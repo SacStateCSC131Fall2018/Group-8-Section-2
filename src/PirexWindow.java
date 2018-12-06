@@ -11,11 +11,17 @@ public class PirexWindow extends JFrame {
     public PirexWindow()
     {
         super();
+        setupIcon();
         setupLayout();
         setupMenu();
         setSize(400,400);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         pack();
+    }
+    
+    private void setupIcon()
+    {
+    	this.setIconImage(new ImageIcon(getClass().getResource("Pirex_Icon.png")).getImage());
     }
     
     private void setupLayout()

@@ -65,6 +65,8 @@ public class MainTabs extends JTabbedPane{
 		loadField1.setBounds(110, 30, 750, 30);
 		panel2.add(loadField1);
 		
+		
+		
 		JPanel panel3 = new JPanel();
 		addTab("Summarize Documents",  panel3);
 		//Text Area for the information

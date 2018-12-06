@@ -4,11 +4,43 @@ import javax.swing.JTextArea;
 
 public class MainTabs extends JTabbedPane{
 	public MainTabs() {
-		JTextArea panelFiller = new JTextArea(200, 200);
+		//JTextArea panelFiller = new JTextArea(200, 200);
 		
 		JPanel panel1 = new JPanel();
-		panel1.add(panelFiller);
+		//panel1.add(panelFiller);
 		addTab("Search for Documents",  panel1);
+		
+		/*SEARCH TAB: GURJOT HANSRA*/
+		
+		//Search Text Field
+		panel1.setLayout(null);
+		TextField textField1 = new TextField();
+		textField1.setBounds(100, 35, 700, 45);
+		panel1.add(textField1);
+				
+		//Query Text
+		JTextPane queryText = new JTextPane();
+		queryText.setText("      QUERY:");
+		queryText.setBounds(10, 35, 200, 45);
+		queryText.setBackground(UIManager.getColor("Button.background")); //changes background color
+		panel1.add(queryText);
+				
+		//Clear Button
+		JButton clearButton = new JButton("CLEAR");
+		clearButton.setBounds(800, 35, 150, 45);
+		panel1.add(clearButton);
+				
+		//Upper Text Field
+		JTextField textField2 = new JTextField();
+		textField2.setBounds(10, 85, 940, 200);
+		panel1.add(textField2);
+				
+		//Lower TextArea
+		TextArea textArea = new TextArea();
+		textArea.setBounds(10, 300, 940, 200);
+		panel1.add(textArea);
+				
+		/*--------------------------------------*/
 		
 		JPanel panel2 = new JPanel();
 		addTab("Load Documents",  panel2);

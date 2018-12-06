@@ -14,6 +14,7 @@ public class Pirex
         
         window = new PirexWindow();
         window.setTitle("Pirex");        
+        window.setBounds(100, 100, 990, 620); //set window size
         window.setVisible(true);
     }
 }

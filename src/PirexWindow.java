@@ -1,7 +1,7 @@
 import java.awt.BorderLayout;
 import java.awt.Menu;
 import java.awt.MenuBar;
-
+import javax.swing.JOptionPane;
 import javax.swing.*;
 
 public class PirexWindow extends JFrame {
@@ -72,6 +72,7 @@ public class PirexWindow extends JFrame {
         
         //Shows About (Doesn't show anything)
         menuItem = new JMenuItem("About");
+        menuItem.addActionListener((event) -> JOptionPane.showMessageDialog(null, "Pirex is currently under maintains and data will be available within the week.", "Announcements", JOptionPane.INFORMATION_MESSAGE));
         menuFile.add(menuItem);
         
         //Save Query (Doesn't actually Save)
@@ -90,7 +91,9 @@ public class PirexWindow extends JFrame {
         menuItem = new JMenuItem("Exit");
         menuItem.addActionListener((event) -> System.exit(0));
         menu.add(menuItem);
-              
+       
     	return menuBar;
     }
+    
+    
 }

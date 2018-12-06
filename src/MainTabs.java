@@ -8,6 +8,9 @@ import javax.swing.JTabbedPane;
 import javax.swing.JTextField;
 import javax.swing.JTextPane;
 import javax.swing.UIManager;
+import javax.swing.JScrollPane;
+import javax.swing.JTextArea;
+import javax.swing.ScrollPaneConstants;
 
 public class MainTabs extends JTabbedPane{
 	public MainTabs() {
@@ -64,6 +67,12 @@ public class MainTabs extends JTabbedPane{
 		
 		JPanel panel3 = new JPanel();
 		addTab("Summarize Documents",  panel3);
+		//Text Area for the information
+		JTextArea summaryFiller = new JTextArea(32, 83);
+		panel3.add(summaryFiller);
+		//Adds a scroll pane for the information to be scrollable
+		JScrollPane scroll = new JScrollPane();
+		scroll.setVerticalScrollBarPolicy(ScrollPaneConstants.VERTICAL_SCROLLBAR_ALWAYS);
 		
 		setTabLayoutPolicy(JTabbedPane.SCROLL_TAB_LAYOUT);
 	}

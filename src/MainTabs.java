@@ -53,7 +53,7 @@ public class MainTabs extends JTabbedPane{
 		addTab("Load Documents",  panel2);
 		
 		panel2.setLayout(null);
-		
+		// text box
 		JLabel loadLabel1 = new JLabel("Text File: ");
 		loadLabel1.setBounds(10, 30, 100, 30);
 		panel2.add(loadLabel1);

@@ -1,6 +1,12 @@
+import java.awt.TextArea;
+import java.awt.TextField;
+
+import javax.swing.JButton;
 import javax.swing.JPanel;
 import javax.swing.JTabbedPane;
-import javax.swing.JTextArea;
+import javax.swing.JTextField;
+import javax.swing.JTextPane;
+import javax.swing.UIManager;
 
 public class MainTabs extends JTabbedPane{
 	public MainTabs() {

@@ -2,6 +2,7 @@ import java.awt.TextArea;
 import java.awt.TextField;
 
 import javax.swing.JButton;
+import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.JTabbedPane;
 import javax.swing.JTextField;
@@ -50,6 +51,16 @@ public class MainTabs extends JTabbedPane{
 		
 		JPanel panel2 = new JPanel();
 		addTab("Load Documents",  panel2);
+		
+		panel2.setLayout(null);
+		
+		JLabel loadLabel1 = new JLabel("Text File: ");
+		loadLabel1.setBounds(10, 30, 100, 30);
+		panel2.add(loadLabel1);
+		
+		JTextField loadField1 = new JTextField();
+		loadField1.setBounds(110, 30, 750, 30);
+		panel2.add(loadField1);
 		
 		JPanel panel3 = new JPanel();
 		addTab("Summarize Documents",  panel3);

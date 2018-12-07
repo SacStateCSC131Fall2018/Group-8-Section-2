@@ -15,7 +15,9 @@ import javax.swing.ScrollPaneConstants;
 
 public class MainTabs extends JTabbedPane{
 	public MainTabs() {
+		
 		//JTextArea panelFiller = new JTextArea(200, 200);
+		
 		
 		JPanel panel1 = new JPanel();
 		//panel1.add(panelFiller);
@@ -53,10 +55,13 @@ public class MainTabs extends JTabbedPane{
 				
 		/*--------------------------------------*/
 		
+		
 		JPanel panel2 = new JPanel();
 		addTab("Load Documents",  panel2);
 		
+		// Layout null..
 		panel2.setLayout(null);
+		
 		// text box
 		JLabel loadLabel1 = new JLabel("Text File: ");
 		loadLabel1.setBounds(10, 30, 100, 30);

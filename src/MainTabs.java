@@ -1,6 +1,8 @@
 import java.awt.TextArea;
 import java.awt.TextField;
 import java.awt.Choice;
+import java.awt.GridBagConstraints;
+import java.awt.GridBagLayout;
 import java.awt.SystemColor;
 import javax.swing.JButton;
 import javax.swing.JLabel;
@@ -56,18 +58,75 @@ public class MainTabs extends JTabbedPane{
 		/*--------------------------------------*/
 		
 		
-		JPanel panel2 = new JPanel();
+		
+		/*
+		 * THIS IS THE NEW GRID BASED LAYOUT LOAD TAB
+		 * IT'S NOT WORKING AS EXPECTED SO THERE'S ONLY 3 WIDGETS
+		 * BUT HAS SOME COMMENTS
+		 */
+		
+		// assigns the gridbaglayout required
+		JPanel panel2 = new JPanel(new GridBagLayout());
 		addTab("Load Documents",  panel2);
 		
-		// Layout null..
+		// constraints object required 
+        GridBagConstraints cst = new GridBagConstraints();
+		
+		// adds text
+		JLabel loadLabel1 = new JLabel("Text File: ");
+		cst.fill = GridBagConstraints.HORIZONTAL;
+		//for resizing on horizontal, width change, takes from 0 to 1
+		cst.weightx = 1;
+		//for resizing on vertical, height change, takes from 0 to 1
+		cst.weighty = 1;
+		//starts on first column
+        cst.gridx = 0;
+        //starts on first row
+        cst.gridy = 0;
+        panel2.add(loadLabel1,cst);
+		
+        JTextField searchField = new JTextField();
+        cst.fill = GridBagConstraints.HORIZONTAL;
+        cst.weightx = 1;
+		cst.weighty = 1;
+		//supposed to make it span for 2 columns but displays same size as next widget, needs fixing... can't keep going
+        cst.gridwidth = 2;
+        cst.gridx = 1;
+        cst.gridy = 0;
+        panel2.add(searchField,cst);
+        
+        JButton browseButton = new JButton("Browse");
+        cst.fill = GridBagConstraints.HORIZONTAL;
+        cst.weightx = 1;
+		cst.weighty = 1;
+        cst.gridx = 3;
+        cst.gridy = 0;
+        panel2.add(browseButton, cst);
+ 
+        /*
+		 * END OF NEW GRID BASED LAYOUT
+		 */
+        
+        
+        
+        /*
+         * THIS WAS THE ORIGINAL LOAD TAB CODE
+         * WITH NULL LAYOUT
+         * SHOULD DELETE GRID BASED CODE
+         * AND UNCOMMENT THIS ONE TO GO BACK TO NORMAL
+
+      
+        	JPanel panel2 = new JPanel(new GridBagLayout());
+		addTab("Load Documents",  panel2);
+		
+         // Layout null..
 		panel2.setLayout(null);
 		
 		// text box
 		JLabel loadLabel1 = new JLabel("Text File: ");
 		loadLabel1.setBounds(10, 30, 100, 30);
 		panel2.add(loadLabel1);
-		
-
+         
 		//BROWSE
 		JButton browseButton = new JButton("Browse");
 		browseButton.setBounds(800, 35, 150, 45);
@@ -122,9 +181,16 @@ public class MainTabs extends JTabbedPane{
 		mainTextField.setBounds(10, 250, 900, 250);
 		panel2.add(mainTextField);
 		mainTextField.setColumns(10);
-		
+
+
+		* END OF ORIGINAL LAYOUT 
+		* SHOULD DELETE GRID BASED LAYOUT AND UNCOMMENT THIS ONE
+		*/
+        
+        
 		//////////////////////////////////////////////
 		
+        
 		JPanel panel3 = new JPanel();
 		addTab("Summarize Documents",  panel3);
 		//Text Area for the information

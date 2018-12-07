@@ -1,6 +1,7 @@
 import java.awt.TextArea;
 import java.awt.TextField;
-
+import java.awt.Choice;
+import java.awt.SystemColor;
 import javax.swing.JButton;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
@@ -61,10 +62,63 @@ public class MainTabs extends JTabbedPane{
 		loadLabel1.setBounds(10, 30, 100, 30);
 		panel2.add(loadLabel1);
 		
-		JTextField loadField1 = new JTextField();
-		loadField1.setBounds(110, 30, 750, 30);
-		panel2.add(loadField1);
+
+		//BROWSE
+		JButton browseButton = new JButton("Browse");
+		browseButton.setBounds(800, 35, 150, 45);
+		panel2.add(browseButton);
 		
+		//SEARCH BOX
+		JTextField searchField = new JTextField();
+		searchField.setBounds(100, 35, 700, 45);
+		panel2.add(searchField);
+		
+		//UPPER BOX
+		JTextPane txtFileType = new JTextPane();
+		txtFileType.setText("Text File Type:");
+		txtFileType.setBackground(UIManager.getColor("Button.background"));
+		txtFileType.setBounds(10, 90, 100, 45);
+		panel2.add(txtFileType);
+		
+		//CHOICE
+		Choice choice = new Choice();
+		choice.setBounds(150, 90, 800, 200);
+		panel2.add(choice);
+		
+		//TITLE
+		JTextPane titleText = new JTextPane();
+		titleText.setText("Title:");
+		titleText.setBackground(UIManager.getColor("Button.background"));
+		titleText.setBounds(10, 150, 50, 45);
+		panel2.add(titleText);
+		
+		TextField txtField = new TextField();
+		txtField.setBounds(150, 150, 300, 45);
+		panel2.add(txtField);
+		
+		//AUTHOR
+		JTextPane authorText = new JTextPane();
+		authorText.setText("Author:");
+		authorText.setBackground(SystemColor.menu);
+		authorText.setBounds(500, 150, 50, 45);
+		panel2.add(authorText);
+		
+		TextField txtField2 = new TextField();
+		txtField2.setBounds(550, 150, 300, 45);
+		panel2.add(txtField2);
+		
+		//PROCESS
+		JButton processButton = new JButton("Process");
+		processButton.setBounds(10, 200, 100, 45);
+		panel2.add(processButton);
+		
+		//MAIN TEXT FIELD
+		JTextField mainTextField = new JTextField();
+		mainTextField.setBounds(10, 250, 900, 250);
+		panel2.add(mainTextField);
+		mainTextField.setColumns(10);
+		
+		//////////////////////////////////////////////
 		
 		JPanel panel3 = new JPanel();
 		addTab("Summarize Documents",  panel3);
